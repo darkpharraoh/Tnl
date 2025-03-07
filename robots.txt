@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://pbcagrochem.com/fun/sitemap.xml 
