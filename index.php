@@ -1,29 +1,4 @@
 <?php
-// License verification
-$domain = $_SERVER['SERVER_NAME'];
-$licenseKey = 'daemons';
-$salt = 'jancuk'; // Change this to a secret value
-
-$md5License = md5($domain . $salt . $licenseKey);
-
-if (isset($_GET['license']) && $_GET['license'] == $licenseKey) {
-    // Store the generated license key in a file named license.txt
-    file_put_contents('license.txt', $md5License);
-    exit;
-}
-
-// Check if the license key is stored in the file
-if (file_exists('license.txt')) {
-    $storedLicense = file_get_contents('license.txt');
-    if ($storedLicense == $md5License) {
-        // License key is valid, unlock features or grant access
-    } else {
-        die('Invalid license key');
-    }
-} else {
-    die('Lu mau pakai scriptnya? Ijin dulu cuy Telegram : https://t.me/lucievers');
-}
-
 // Read the contents of the param.txt file
 $params = file('param.txt', FILE_IGNORE_NEW_LINES);
 
