@@ -26,7 +26,7 @@ foreach ($keywords as $i => $keyword) {
 
     // Create a new URL element
     $sitemap_files[$sitemap_file_number] .= '  <url>' . "\n";
-    $sitemap_files[$sitemap_file_number] .= '    <loc>https://cleandayndus.com/-/?go=' . urlencode($keyword) . '</loc>' . "\n";
+    $sitemap_files[$sitemap_file_number] .= '    <loc>https://inpid.edu.pe/-/?go=' . urlencode($keyword) . '</loc>' . "\n";
     $sitemap_files[$sitemap_file_number] .= '  </url>' . "\n";
 }
 
@@ -39,7 +39,7 @@ foreach ($sitemap_files as $sitemap_file_number => &$sitemap_file) {
 // Create the sitemap index file
 foreach ($sitemap_files as $sitemap_file_number => $sitemap_file) {
     $sitemap_index .= '  <sitemap>' . "\n";
-    $sitemap_index .= '    <loc>https://cleandayndus.com/-/sitemap-' . $sitemap_file_number . '.xml</loc>' . "\n";
+    $sitemap_index .= '    <loc>https://inpid.edu.pe/-/sitemap-' . $sitemap_file_number . '.xml</loc>' . "\n";
     $sitemap_index .= '  </sitemap>' . "\n";
 }
 $sitemap_index .= '</sitemapindex>' . "\n";
